@@ -3,16 +3,15 @@
 
 #include <string>
 
-
 using namespace std;
 
 class Element{
 
 private:
-	int m_id;
-	pair<double, double> m_coordinates;
-	string m_name;
-	string m_description;
+	int id;
+	pair<double, double> coordinates;
+	string name;
+	string description;
 
 public:
 	Element(int id, pair<double, double> coordinates, string name, string description);

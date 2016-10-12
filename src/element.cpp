@@ -4,25 +4,25 @@
 using namespace std;
 
  Element::Element(int id, pair<double, double> coordinates, string name, string description){
- 	m_id = id;
- 	m_coordinates = coordinates;
- 	m_name = name;
- 	m_description = description;
+ 	this->id = id;
+ 	this->coordinates = coordinates;
+ 	this->name = name;
+ 	this->description = description;
 
  }
 
 int Element::getId(){
-	return m_id;
+	return id;
 }
 
 pair<double, double> Element::getCoordinates(){
-	return m_coordinates;
+	return coordinates;
 }
 
 string Element::getName(){
-	return m_name;
+	return name;
 }
 
 string Element::getDescription(){
-	return m_description;
+	return description;
 }

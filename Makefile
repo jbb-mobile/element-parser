@@ -1,23 +1,23 @@
-BINFOLDER := bin/ 
+BINFOLDER := bin/
 INCFOLDER := inc/
 SRCFOLDER := src/
-OBJFOLDER := obj/ 
+OBJFOLDER := obj/
 
-CCP := g++ 
-CFLAGS := -Wall -ansi -pedantic 
+CCP := g++
+CFLAGS := -Wall -ansi -pedantic -std=c++11
 
-SRCFILES := $(wildcard src/*.cpp) 
+SRCFILES := $(wildcard src/*.cpp)
 
-all: $(SRCFILES:src/%.cpp=obj/%.o)   
-	$(CCP) $(CFLAGS) obj/*.o -o bin/parser -I./inc   
+all: $(SRCFILES:src/%.cpp=obj/%.o)
+	$(CCP) $(CFLAGS) obj/*.o -o bin/parser -I./inc
 
-obj/%.o: src/%.cpp   
-	$(CCP) $(CFLAGS) -c $< -o $@ -I./inc   
+obj/%.o: src/%.cpp
+	$(CCP) $(CFLAGS) -c $< -o $@ -I./inc
 
-.PHONY: clean 
+.PHONY: clean
 
-run:    
-	./bin/parser 
-clean:   
-	rm -rf obj/*   
-	rm -rf bin/*  
+run:
+	./bin/parser
+clean:
+	rm -rf obj/*
+	rm -rf bin/*
